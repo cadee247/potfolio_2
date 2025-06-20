@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Cadee Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <!-- Main Styles (reuse your main styles.css if applicable) -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">Cadee</div>
+      <div class="links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#demos">Demo's</a>
+        <a href="index.html#testimonial">Testimonial</a>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="index.html#home" onclick="cancel()">Home</a>
+        <a href="index.html#about" onclick="cancel()">About</a>
+        <a href="index.html#skills" onclick="cancel()">Skills</a>
+        <a href="projects.html" onclick="cancel()">Projects</a>
+        <a href="index.html#demos" onclick="cancel()">Demo's</a>
+        <a href="index.html#testimonial" onclick="cancel()">Testimonial</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-container" data-aos="fade-up">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="project1.jpg" alt="Project 1" />
+          <div class="project-info">
+            <h3>Project Title 1</h3>
+            <p>
+              A brief description of Project 1. This project highlights my work on building responsive, user-friendly web applications.
+            </p>
+            <a href="#" class="btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="project2.jpg" alt="Project 2" />
+          <div class="project-info">
+            <h3>Project Title 2</h3>
+            <p>
+              A short description of Project 2. This project showcases innovative design and technical expertise.
+            </p>
+            <a href="#" class="btn">View Details</a>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="project3.jpg" alt="Project 3" />
+          <div class="project-info">
+            <h3>Project Title 3</h3>
+            <p>
+              A brief overview of Project 3. This project demonstrates a strong understanding of full-stack development.
+            </p>
+            <a href="#" class="btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS Scripts and Mobile Nav Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+    
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0)";
+    }
+    
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>
