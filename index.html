@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadee Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">Cadee</div>
+      <div class="links">
+        <div class="link"><a href="#home">Home</a></div>
+        <div class="link"><a href="#about">About</a></div>
+        <div class="link"><a href="#skills">Skills</a></div>
+        <div class="link"><a href="#projects">Projects</a></div>
+        <div class="link"><a href="#demos">Demos</a></div>
+        <div class="link"><a href="#contact">Contact</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+
+    <div class="dropdown">
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#demos">Demos</a>
+        <a href="#contact">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="main-container">
+      <div class="image" data-aos="zoom-in-right">
+        <img src="potfolio.jpg" alt="Cadee" />
+      </div>
+      <div class="content">
+        <h1 data-aos="fade-left">Hi there, I'm <span>Cadee</span></h1>
+        <div class="typewriter" data-aos="fade-right">
+          I'm a <span class="typing-text"></span>
+        </div>
+        <p data-aos="flip-up">
+          Meet Cadee – Full-Stack Developer & Problem Solver.
+          I'm a versatile developer passionate about building smooth, high-performance applications.
+          Whether it's crafting user-friendly experiences or streamlining complex functionality, I focus on
+          efficiency, innovation, and impact.
+        </p>
+        <!-- <div class="social-links" data-aos="flip-down">
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <div class="btn" data-aos="zoom-out-left"> -->
+          <button>Download CV</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-text" data-aos="fade-left">
+        <h2>About Me</h2>
+        <p>
+          I love coding — not just solving problems, but creating things that feel purposeful and intuitive.
+          I thrive in collaborative environments where ideas bounce, evolve, and come to life. Always curious, I see
+          every project as a chance to learn something new and push my skills further.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+   
+    <section id="skills">
+        <div id="skills-content"></div>
+    </section>
+
+    <script>
+        fetch('skills.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('skills-content').innerHTML = data;
+            });
+    </script>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-container" data-aos="fade-up">
+      <h2>My Projects</h2>
+      <div class="project-list">
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Shopping Cart App</h3>
+          <p>A JavaScript-based cart system that manages items, updates totals, and displays them in real-time.</p>
+          <a href="shoppingcart" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Expense Tracker App</h3>
+          <p>Built with React and Firebase. Tracks personal expenses in real-time with authentication and Firestore sync.</p>
+          <a href="https://golden-queijadas-554e24.netlify.app/signin" target="_blank">View App</a>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <h3>Calculator App</h3>
+          <p>A simple JavaScript calculator using switch statements and dynamic input handling.</p>
+          <a href="calculator/chap9.html" target="_blank">View Calculator</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Demos Section -->
+  <section id="demos">
+    <div class="section-container" data-aos="fade-up">
+      <h2>Demos</h2>
+      <p>Demo links or video walkthroughs can be embedded here for easy showcase.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+  <div class="section-container" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p>📞 Phone: <a href="tel:+27991983027">079 198 3027</a></p>
+      <p>✉️ Email: <a href="mailto:rousseaucadee@gmail.com">rousseaucadee@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({ offset: 0 });</script>
+
+  <!-- Typewriter -->
+  <script>
+    const textArray = ["Full Stack Developer"];
+    let index = 0, letterIndex = 0;
+    function typeEffect() {
+      const span = document.querySelector(".typing-text");
+      if (letterIndex < textArray[index].length) {
+        span.textContent += textArray[index][letterIndex];
+        letterIndex++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", typeEffect);
+  </script>
+
+  <!-- Mobile Nav Toggle -->
+  <script>
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0)";
+    }
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+
+</body>
+
+</html>
