@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadee Portfolio</title>
+  <title>Cadee's Portfolio</title>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
@@ -17,13 +17,14 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">Cadee</div>
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">Portfolio</div>
       <div class="links">
         <div class="link"><a href="#home">Home</a></div>
         <div class="link"><a href="#about">About</a></div>
         <div class="link"><a href="#skills">Skills</a></div>
         <div class="link"><a href="#projects">Projects</a></div>
-        <div class="link"><a href="#demos">Demos</a></div>
+        <div class="link"><a href="#certificates">Certificates</a></div>
+        <!-- <div class="link"><a href="#demos">Demos</a></div> -->
         <div class="link"><a href="#contact">Contact</a></div>
       </div>
       <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
@@ -35,7 +36,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#demos">Demos</a>
+        <!-- <a href="#demos">Demos</a> -->
         <a href="#contact">Contact</a>
         <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
       </div>
@@ -46,7 +47,7 @@
   <section id="home">
     <div class="main-container">
       <div class="image" data-aos="zoom-in-right">
-        <img src="potfolio.jpg" alt="Cadee" />
+        <img src="potfolio.jpg" alt="Portfolio" />
       </div>
       <div class="content">
         <h1 data-aos="fade-left">Hi there, I'm <span>Cadee</span></h1>
@@ -54,21 +55,25 @@
           I'm a <span class="typing-text"></span>
         </div>
         <p data-aos="flip-up">
-          Meet Cadee – Full-Stack Developer & Problem Solver.
+          Meet Cadee - Full-Stack Developer & Software Engineer.
           I'm a versatile developer passionate about building smooth, high-performance applications.
           Whether it's crafting user-friendly experiences or streamlining complex functionality, I focus on
           efficiency, innovation, and impact.
         </p>
-        <!-- <div class="social-links" data-aos="flip-down">
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <div class="social-links" data-aos="flip-down">
+          <a href="https://github.com/cadee247" target="_blank">
+  <i class="fa-brands fa-github"></i>
+</a>
+
+          <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a> -->
           <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
         </div>
-        <div class="btn" data-aos="zoom-out-left"> -->
-          <button>Download CV</button>
-        </div>
+        <div class="btn" data-aos="zoom-out-left">
+        <a href="RESUME.pdf" download class="download-btn">Download CV</a>
+
       </div>
+    </div>
     </div>
   </section>
 
@@ -87,18 +92,18 @@
   </section>
 
   <!-- Skills Section -->
-   
-    <section id="skills">
-        <div id="skills-content"></div>
-    </section>
 
-    <script>
-        fetch('skills.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('skills-content').innerHTML = data;
-            });
-    </script>
+  <section id="skills">
+    <div id="skills-content"></div>
+  </section>
+
+  <script>
+    fetch('skills.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('skills-content').innerHTML = data;
+      });
+  </script>
 
   <!-- Projects Section -->
   <section id="projects">
@@ -109,43 +114,87 @@
         <div class="project-card" data-aos="fade-up" data-aos-delay="200">
           <h3>Shopping Cart App</h3>
           <p>A JavaScript-based cart system that manages items, updates totals, and displays them in real-time.</p>
-          <a href="shoppingcart" target="_blank">View Project</a>
+          <a href="shoppingcart" target="_blank">View App</a>
         </div>
 
         <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-          <h3>Expense Tracker App</h3>
-          <p>Built with React and Firebase. Tracks personal expenses in real-time with authentication and Firestore sync.</p>
-          <a href="https://golden-queijadas-554e24.netlify.app/signin" target="_blank">View App</a>
+          <h3>Task Board App</h3>
+          <p> drag-and-drop task board that lets users create, move, and organize tasks between columns like "To Do,"
+            "In Progress," and "Done." Tasks update live without reloading the page, using HTMX.</p>
+          <a href="https://imaginative-alpaca-3f6649.netlify.app/" target="_blank">View App</a>
         </div>
 
         <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-          <h3>Calculator App</h3>
-          <p>A simple JavaScript calculator using switch statements and dynamic input handling.</p>
-          <a href="calculator/chap9.html" target="_blank">View Calculator</a>
+          <h3>Guessing Game App</h3>
+          <p>A lightweight web-based game built with Python and Flask, where users try to guess a randomly generated
+            number between 1 and 100 within 7 attempts..</p>
+          <a href="https://guessing-gamer.onrender.com/" target="_blank">View App</a>
         </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+          <h3> Blog Post App</h3>
+          <p>A full stack blogging platform built with Node.js, Express, MongoDB, and EJS. Users can register, log in,
+            create posts with image uploads, and comment on others’ posts. The app features secure authentication,
+            dynamic routing, and a responsive Bootstrap-styled UI</p>
+          <a href="https://blog-post-9dik.onrender.com/" target="_blank">View App</a>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Expense Tracker App</h3>
+          <p>Built with React and Firebase. Tracks personal expenses in real-time with authentication and Firestore
+            sync.</p>
+          <a href="https://golden-queijadas-554e24.netlify.app/signin" target="_blank">View App</a>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Movie Review App</h3>
+          <p>A fully functional MERN (MongoDB, Express, React, Node.js) web application that allows users to browse,
+            review, and rate movies</p>
+          <a href="https://mern-stack-frontend-bi53.onrender.com" target="_blank">View App</a>
+        </div>
+      </div>
+  </section>
+
+  <!-- Demos Section -->
+  <div class="project-list">
+
+
+
+    <!-- 👇 New Pair Project block -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+      <h3>Pair project demo</h3>
+      <p>
+        A collaborative GraphQL demo app built with a partner. Showcases my skills in backend logic, schema design,
+        and teamwork through effective pair programming.
+      </p>
+      <a href="https://youtu.be/uivo-eX-a7Y" target="_blank">Watch Demo</a>
+    </div>
+    <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+      <h3>Pair project demo</h3>
+      <p>
+        A hands-on JWT authentication tutorial project built collaboratively with a peer. Together, we implemented
+        secure login flows using JSON Web Tokens, discussed middleware patterns, and explained each step to our trainer.
+        I focused on route protection, cookie-based token storage, and clearly communicating backend logic and security
+        concepts, demonstrating both technical depth and effective pair programming.
+
+
+      </p>
+      <a href="https://youtu.be/Bb5CUmfDqWs" target="_blank">Watch Demo</a>
+    </div>
+
+
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-container" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <p>📞 Phone: <a href="tel:+27991983027">079 198 3027</a></p>
+        <p>✉️ Email: <a href="mailto:rousseaucadee@gmail.com">rousseaucadee@gmail.com</a></p>
+        <p>🌍 Location: Johannesburg, South Africa</p>
 
       </div>
     </div>
   </section>
-
-  <!-- Demos Section -->
-  <section id="demos">
-    <div class="section-container" data-aos="fade-up">
-      <h2>Demos</h2>
-      <p>Demo links or video walkthroughs can be embedded here for easy showcase.</p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-  <div class="section-container" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    <div class="contact-info">
-      <p>📞 Phone: <a href="tel:+27991983027">079 198 3027</a></p>
-      <p>✉️ Email: <a href="mailto:rousseaucadee@gmail.com">rousseaucadee@gmail.com</a></p>
-    </div>
-  </div>
-</section>
 
 
   <!-- AOS -->
@@ -154,7 +203,7 @@
 
   <!-- Typewriter -->
   <script>
-    const textArray = ["Full Stack Developer"];
+    const textArray = ["Full Stack Developer & Software Engineer", ];
     let index = 0, letterIndex = 0;
     function typeEffect() {
       const span = document.querySelector(".typing-text");
